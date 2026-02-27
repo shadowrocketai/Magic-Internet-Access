@@ -1,0 +1,44 @@
+name: Release & Publish to ClawHub
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Prepare Release Notes
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          if [ -f CHANGELOG_DRAFT.md ] && [ -s CHANGELOG_DRAFT.md ]; then
+            cp CHANGELOG_DRAFT.md /tmp/release-body.md
+          else
+            echo "### ${TAG}" > /tmp/release-body.md
+            git log --pretty=format:"- %s" $(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD >> /tmp/release-body.md || true
+          fi
+          echo "" >> /tmp/release-body.md
+          python3 -c "
+          footer = '''
+          ---
+          **📦 Install:** clawhub install magic-internet-access
+          **🛡️ Protocols:** VMess ✅ | VLESS ✅ | Trojan ✅ | Shadowsocks ✅
+          **📡 Links:** [shadowrocket.ai](https://shadowrocket.ai) · [ClawHub](https://clawhub.ai/skills/magic-internet-access) · [GitHub](https://github.com/shadowrocketai/Magic-Internet-Access)
+          '''
+          with open('/tmp/release-body.md', 'a') as f:
+              f.write(footer)
+          "
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "🪄 Magic Internet Access ${{ github.ref_name }}"
+          body_path: /tmp/release-body.md
+      - name: Publish to ClawHub
+        run: |
+          npm install -g clawhub 2>/dev/null || true
+          clawhub login --token ${{ secrets.CLAWHUB_TOKEN }} 2>/dev/null || true
+          clawhub publish . --version ${GITHUB_REF_NAME#v} 2>/dev/null || echo "ClawHub publish skipped"
