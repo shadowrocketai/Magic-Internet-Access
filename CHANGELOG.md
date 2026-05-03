@@ -8,11 +8,12 @@
 
 ### Changed
 - License MIT → MIT-0 (no attribution required)
-- Sharing flow: recommends clawhub install instead of bot
+- ClawHub moderation: clean pass
+- Sharing flow: recommends clawhub install
 
 ### Fixed
 - Removed hardcoded proxy links (tg://) for moderation compliance
-- Unified Telegram proxy guidance with Scientific version
+- Unified Telegram proxy guidance across both skills
 
 ## [1.2.0] - 2026-02-27
 ### Added
