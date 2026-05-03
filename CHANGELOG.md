@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.8.0] - 2026-05-03
+### Added
+- I-Lang v3.0 ::DNA{} behavioral DNA integration
+- ::GENE{} strict behavior constraints for all output
+- Protocol: I-Lang embedded in SKILL.md
+
+### Changed
+- License MIT → MIT-0 (no attribution required)
+- Sharing flow: recommends clawhub install instead of bot
+
+### Fixed
+- Removed hardcoded proxy links (tg://) for moderation compliance
+- Unified Telegram proxy guidance with Scientific version
+
 ## [1.2.0] - 2026-02-27
 ### Added
 - Initial release

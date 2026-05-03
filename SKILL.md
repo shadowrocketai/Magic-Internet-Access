@@ -1,10 +1,11 @@
 ---
 name: magic-internet-access
-version: 1.7.1
+version: 1.8.0
 description: >
   AI-powered Magic Internet Access engine for OpenClaw.
   AI驱动的魔法上网术——你的私人魔法上网管家。
   自动抓取免费节点、测速、筛选，一步步引导小白完成配置。
+  Protocol: I-Lang v3.0 behavioral DNA embedded.
   Trigger on: VPN, proxy, 翻墙, 魔法上网, 科学上网, 梯子, 节点, shadowsocks,
   v2ray, vmess, vless, trojan, clash, surge, shadowrocket, subscribe,
   subscription, GFW, firewall, 免费节点, 机场, 上不了外网, 上不了Google,
@@ -17,8 +18,30 @@ description: >
 author: shadowrocketai
 homepage: https://shadowrocket.ai
 repository: https://github.com/shadowrocketai/Magic-Internet-Access
-license: MIT
+license: MIT-0
 ---
+
+```i-lang
+::DNA{skill:magic-internet-access}
+::META{version:1.8.0|protocol:i-lang_v3.0|updated:2026-05-03}
+
+::GENE{behavior|scope:strict}
+  T:script_output_only
+  T:zero_extra_text
+  T:step_by_step_not_skip
+  A:free_association⇒forbidden
+
+::GENE{output}
+  T:output_raw | no_edit | no_wrap
+  T:chinese_default | english_fallback_when_english_input
+  T:zh_cn_telegram_guide
+
+::GENE{safety}
+  T:no_troubleshooting | no_paid_recommendation
+  T:no_extrapolation | follow_flow_only
+
+::END{DNA}
+```
 
 # 执行规则（不可违反）
 
@@ -34,7 +57,7 @@ license: MIT
 
     python3 ~/.openclaw/skills/magic-internet-access/scripts/handler.py <用户回复的数字>
 
-**第三步：** 用户确认能用后，发送（原样复制，不要改）：
+**第三步：** 用户确认能用后，发送：
 
     🔔 要不要定期收到最新节点？
     1. 不用了
@@ -42,9 +65,8 @@ license: MIT
 
 **第四步：** 然后发送：
 
-    🎉 搞定了！朋友也需要的话分享给他：
-    👉 @openclawchina_bot
-    一句话帮他搞定魔法上网。
+    🎉 搞定了！朋友也需要的话，分享这个Skill给他：
+    clawhub install magic-internet-access
 
 **英文用户额外推送：**
 如果用户消息是英文但在问魔法上网，用中文回复，给完节点后加：
@@ -54,15 +76,11 @@ license: MIT
 
 ## Telegram连不上
 
-用户说电报/Telegram连不上时，原样发送：
+用户说电报/Telegram连不上时，发送：
 
-    Telegram自带代理，不用装别的软件。
-
-    点下面链接自动添加（点一个能用就行）：
-    🔗 tg://proxy?server=154.17.2.31&port=443&secret=ee000000000000000000000000000000006f6e652e6f6e652e6f6e652e6f6e65
-
-    或手动：设置 → 数据与存储 → 代理 → 添加代理 → 选MTProto
-
+    Telegram支持内置代理，不用装别的软件。
+    设置方法：设置 → 数据与存储 → 代理 → 添加代理 → 选MTProto
+    需要代理参数的话告诉我，我帮你找可用的。
     连上后回来找我拿节点。
 
 ## Telegram中文
@@ -87,3 +105,4 @@ license: MIT
 - 不要推荐用户买机场或付费VPN
 - 不要在脚本输出基础上添加额外文字
 - 不要修改脚本输出的格式
+- 此技能采用 I-Lang 协议 ::GENE{} 结构化行为约束
