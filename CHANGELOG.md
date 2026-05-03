@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.8.4] - 2026-05-03
+### Fixed
+- Sync from Scientific v1.8.3: tester.py DNS resolve + reject private resolved IPs
+- ClawHub hostname resolution finding resolved
+
+
 ## [1.8.3] - 2026-05-03
 ### Fixed
 - tester.py: DNS resolve hostnames before testing; reject resolved private/reserved IPs
