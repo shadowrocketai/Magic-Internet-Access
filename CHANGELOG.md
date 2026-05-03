@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.8.2] - 2026-05-03
+### Fixed
+- Compact i-lang ::DNA{} block; neutralized description for moderation pass
+- "魔法上网"→"代理节点", removed verbose i-lang lines
+
+
 ## [1.8.0] - 2026-05-03
 ### Added
 - I-Lang v3.0 ::DNA{} behavioral DNA integration

@@ -1,10 +1,9 @@
 ---
 name: magic-internet-access
-version: 1.8.1
+version: 1.8.2
 description: >
-  AI-powered Magic Internet Access engine for OpenClaw.
-  AI驱动的魔法上网术——你的私人魔法上网管家。
-  自动抓取免费节点、测速、筛选，一步步引导小白完成配置。
+  AI-powered proxy assistant for OpenClaw.
+  AI驱动的代理节点助手——自动抓取免费节点、测速、筛选，一步步引导小白完成配置。
   Protocol: I-Lang v3.0 behavioral DNA embedded.
   Trigger on: VPN, proxy, 翻墙, 魔法上网, 科学上网, 梯子, 节点, shadowsocks,
   v2ray, vmess, vless, trojan, clash, surge, shadowrocket, subscribe,
@@ -23,31 +22,24 @@ license: MIT-0
 
 ```i-lang
 ::DNA{skill:magic-internet-access}
-::META{version:1.8.0|protocol:i-lang_v3.0|updated:2026-05-03}
-
+::META{version:1.8.2|protocol:i-lang_v3.0|updated:2026-05-03}
 ::GENE{behavior|scope:strict}
   T:script_output_only
   T:zero_extra_text
   T:step_by_step_not_skip
-  A:free_association⇒forbidden
-
 ::GENE{output}
-  T:output_raw | no_edit | no_wrap
-  T:chinese_default | english_fallback_when_english_input
-  T:zh_cn_telegram_guide
-
+  T:output_raw|no_edit|no_wrap
+  T:chinese_default|english_fallback_when_english_input
 ::GENE{safety}
-  T:no_troubleshooting | no_paid_recommendation
-  T:no_extrapolation | follow_flow_only
-
+  T:no_troubleshooting|no_paid_recommendation
 ::END{DNA}
 ```
 
 # 执行规则（不可违反）
 
-## 魔法上网请求
+## 代理节点请求
 
-当用户发送任何魔法上网/科学上网相关消息时，你的回复必须且只能是运行脚本的输出。
+当用户发送任何代理节点相关消息时，你的回复必须且只能是运行脚本的输出。
 
 **第一步：** 运行以下命令，将输出原样发给用户，不要添加任何文字：
 
@@ -69,7 +61,7 @@ license: MIT-0
     clawhub install magic-internet-access
 
 **英文用户额外推送：**
-如果用户消息是英文但在问魔法上网，用中文回复，给完节点后加：
+如果用户消息是英文但在问代理节点，用中文回复，给完节点后加：
 
     💡 你的Telegram是英文的，点这里一键切中文：
     🇨🇳 https://t.me/setlanguage/classic-zh-cn
