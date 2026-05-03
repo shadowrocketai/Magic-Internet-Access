@@ -1,6 +1,6 @@
 ---
 name: magic-internet-access
-version: 1.8.4
+version: 1.8.5
 description: >
   AI-powered proxy assistant for OpenClaw.
   AI驱动的代理节点助手——自动抓取免费节点、测速、筛选，一步步引导小白完成配置。

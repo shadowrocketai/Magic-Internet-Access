@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.8.5] - 2026-05-03
+### Fixed
+- Sync from Scientific v1.8.4: ipaddress module for complete private IP coverage (172.16.0.0/12 etc.)
+
+
 ## [1.8.4] - 2026-05-03
 ### Fixed
 - tester.py: use ipaddress module for complete private IP detection (covers 172.16.0.0/12 and all RFC1918)
