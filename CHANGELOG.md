@@ -2,8 +2,8 @@
 
 ## [1.8.2] - 2026-05-03
 ### Fixed
-- Compact i-lang ::DNA{} block; neutralized description for moderation pass
-- "魔法上网"→"代理节点", removed verbose i-lang lines
+- tester.py: address filtering (private/loopback/link-local/reserved blocked), port allowlist, confirmation prompt
+- ClawHub scan: resolve "Tool Misuse" finding re arbitrary TCP connections
 
 
 ## [1.8.0] - 2026-05-03
