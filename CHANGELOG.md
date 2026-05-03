@@ -2,8 +2,9 @@
 
 ## [1.8.3] - 2026-05-03
 ### Fixed
-- tester.py: address/port filtering from Scientific v1.8.2 sync
-- ClawHub "Tool Misuse" finding resolved
+- tester.py: DNS resolve hostnames before testing; reject resolved private/reserved IPs
+- Narrowed ALLOWED_PORTS to proxy-only ports (removed SSH/MySQL/VNC)
+- ClawHub hostname resolution finding resolved
 
 
 ## [1.8.2] - 2026-05-03
