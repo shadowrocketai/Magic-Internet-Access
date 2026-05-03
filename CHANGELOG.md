@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.8.3] - 2026-05-03
+### Fixed
+- tester.py: address/port filtering from Scientific v1.8.2 sync
+- ClawHub "Tool Misuse" finding resolved
+
+
 ## [1.8.2] - 2026-05-03
 ### Fixed
 - tester.py: address filtering (private/loopback/link-local/reserved blocked), port allowlist, confirmation prompt
