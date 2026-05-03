@@ -2,8 +2,8 @@
 
 ## [1.8.4] - 2026-05-03
 ### Fixed
-- Sync from Scientific v1.8.3: tester.py DNS resolve + reject private resolved IPs
-- ClawHub hostname resolution finding resolved
+- tester.py: use ipaddress module for complete private IP detection (covers 172.16.0.0/12 and all RFC1918)
+- Removed incomplete string-prefix approach; full ipaddress.is_private/is_loopback/etc.
 
 
 ## [1.8.3] - 2026-05-03
